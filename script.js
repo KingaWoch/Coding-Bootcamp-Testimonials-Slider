@@ -1,15 +1,19 @@
 let slides = document.querySelectorAll(".slider__slide");
-const previousBtn = document.getElementById("previous");
-const nextBtn = document.getElementById("next");
+const previousBtn = document.querySelectorAll(".previous");
+const nextBtn = document.querySelectorAll(".next");
 
 let currentSlide = 0;
 
-previousBtn.addEventListener("click", () => {
-  changeSlide(currentSlide + 1);
+previousBtn.forEach((previous) => {
+  previous.addEventListener("click", () => {
+    changeSlide(currentSlide + 1);
+  });
 });
 
-nextBtn.addEventListener("click", () => {
-  changeSlide(currentSlide - 1);
+nextBtn.forEach((next) => {
+  next.addEventListener("click", () => {
+    changeSlide(currentSlide - 1);
+  });
 });
 
 function changeSlide(n) {
