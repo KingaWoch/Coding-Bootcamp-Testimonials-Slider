@@ -78,13 +78,16 @@ img {
 
 .main-photo {
   border-radius: 0.5rem;
+  -webkit-box-shadow: 14px 33px 28px -9px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 14px 33px 28px -9px rgba(0, 0, 0, 0.19);
+  box-shadow: 14px 33px 28px -9px rgba(0, 0, 0, 0.19);
 }
 
 .slide-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   position: relative;
   padding-top: 1.7rem;
   font-size: 1.15rem;
@@ -175,7 +178,9 @@ h2 {
   }
 
   .slide-text img {
-    left: 4rem;
+    left: 6rem;
+    top: -2.5rem;
+    height: 100px;
   }
 
   .slide-photo {
