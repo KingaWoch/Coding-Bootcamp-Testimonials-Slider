@@ -29,3 +29,15 @@ function changeSlide(n) {
 
   currentSlide = n;
 }
+
+document.onkeydown = function (KeyboardEvent) {
+  switch (KeyboardEvent.keyCode) {
+    case 37:
+      changeSlide(currentSlide - 1);
+      break;
+    case 39:
+      currentSlide++;
+      changeSlide(currentSlide + 1);
+      break;
+  }
+};
