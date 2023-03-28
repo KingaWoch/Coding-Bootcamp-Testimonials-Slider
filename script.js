@@ -30,13 +30,12 @@ function changeSlide(n) {
   currentSlide = n;
 }
 
-document.onkeydown = function (KeyboardEvent) {
-  switch (KeyboardEvent.keyCode) {
-    case 37:
+document.onkeydown = function (e) {
+  switch (e.code) {
+    case "ArrowLeft":
       changeSlide(currentSlide - 1);
       break;
-    case 39:
-      currentSlide++;
+    case "ArrowRight":
       changeSlide(currentSlide + 1);
       break;
   }
